@@ -1,0 +1,1 @@
+# szakmaigyakorlat_2days
