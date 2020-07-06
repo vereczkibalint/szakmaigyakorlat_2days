@@ -3,12 +3,116 @@ package hu.nagy.kristof.carrental;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class Autok extends AppCompatActivity {
+    ArrayList<Car> cars;
 
+    TextView suzukiBrand;
+    TextView suzukiModel;
+    TextView suzukiYear;
+    TextView suzukiPriceperday;
+    TextView suzukikolcsonozheto;
+
+    TextView mazdaBrand;
+    TextView mazdaModel;
+    TextView mazdaYear;
+    TextView mazdaPriceperday;
+    TextView mazdakolcsonozheto;
+
+    TextView volkswagenBrand;
+    TextView volkswagenModel;
+    TextView volkswagenYear;
+    TextView volkswagenPriceperday;
+    TextView volkswagenkolcsonozheto;
+
+    TextView bugattiBrand;
+    TextView bugattiModel;
+    TextView bugattiYear;
+    TextView bugattiPriceperday;
+    TextView bugattikolcsonozheto;
+
+    TextView fordBrand;
+    TextView fordModel;
+    TextView fordYear;
+    TextView fordPriceperday;
+    TextView fordkolcsonozheto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autok);
+
+        loadTextViews();
+        cars = JSONParser.fetchCars(Autok.this);
+
+        for(Car c : cars) {
+            switch (c.getBrand()) {
+                case "Suzuki":
+                    Log.d("brand", c.getBrand());
+                    suzukiBrand.setText(c.getBrand());
+                    suzukiModel.setText(c.getModel());
+                    suzukiYear.setText(c.getYear().toString());
+                    suzukiPriceperday.setText(c.getPricePerDay().toString() + "Ft / nap");
+                    break;
+                case "Mazda":
+                    Log.d("brand", c.getBrand());
+                    mazdaBrand.setText(c.getBrand());
+                    mazdaModel.setText(c.getModel());
+                    mazdaYear.setText(c.getYear().toString());
+                    mazdaPriceperday.setText(c.getPricePerDay().toString() + "Ft / nap");
+                    break;
+                case "Volkswagen":
+                    Log.d("brand", c.getBrand());
+                    volkswagenBrand.setText(c.getBrand());
+                    volkswagenModel.setText(c.getModel());
+                    volkswagenYear.setText(c.getYear().toString());
+                    volkswagenPriceperday.setText(c.getPricePerDay().toString() + "Ft / nap");
+                    break;
+                case "Ford":
+                    Log.d("brand", c.getBrand());
+                    fordBrand.setText(c.getBrand());
+                    fordModel.setText(c.getModel());
+                    fordYear.setText(c.getYear().toString());
+                    fordPriceperday.setText(c.getPricePerDay().toString() + "Ft / nap");
+                    break;
+                case "Bugatti":
+                    Log.d("brand", c.getBrand());
+                    bugattiBrand.setText(c.getBrand());
+                    bugattiModel.setText(c.getModel());
+                    bugattiYear.setText(c.getYear().toString());
+                    bugattiPriceperday.setText(c.getPricePerDay().toString() + "Ft / nap");
+                    break;
+            }
+        }
+    }
+
+    private void loadTextViews(){
+        suzukiBrand = (TextView)findViewById(R.id.suzukiBrand);
+        suzukiModel = (TextView)findViewById(R.id.suzukiModel);
+        suzukiYear = (TextView)findViewById(R.id.suzukiYear);
+        suzukiPriceperday = (TextView)findViewById(R.id.suzukiPriceperday);
+        suzukikolcsonozheto = (TextView)findViewById(R.id.suzukiKolcsonozheto);
+
+        volkswagenBrand = (TextView)findViewById(R.id.poloBrand);
+        volkswagenModel = (TextView)findViewById(R.id.poloModel);
+        volkswagenYear = (TextView)findViewById(R.id.poloYear);
+        volkswagenPriceperday = (TextView)findViewById(R.id.poloPriceperday);
+        volkswagenkolcsonozheto = (TextView)findViewById(R.id.poloKolcsonozheto);
+
+        mazdaBrand = (TextView)findViewById(R.id.mazdaBrand);
+        mazdaModel = (TextView)findViewById(R.id.mazdaModel);
+        mazdaYear = (TextView)findViewById(R.id.mazdaYear);
+        mazdaPriceperday = (TextView)findViewById(R.id.mazdaPriceperday);
+        mazdakolcsonozheto = (TextView)findViewById(R.id.mazdaKolcsonozheto);
+
+        fordBrand = (TextView)findViewById(R.id.fordBrand);
+        fordModel = (TextView)findViewById(R.id.fordModel);
+        fordYear = (TextView)findViewById(R.id.fordYear);
+        fordPriceperday = (TextView)findViewById(R.id.fordPriceperday);
+        fordkolcsonozheto = (TextView)findViewById(R.id.fordKolcsonozheto);
     }
 }

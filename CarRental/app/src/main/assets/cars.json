@@ -1,0 +1,32 @@
+{
+    "cars": [
+        {
+            "brand": "Suzuki",
+            "model": "Swift",
+            "year": "2000",
+            "pricePerDay": "5000",
+            "borrowable": true
+        },
+        {
+            "brand": "Mazda",
+            "model": "RX-8",
+            "year": "2006",
+            "pricePerDay": "50000",
+            "borrowable": true
+        },
+        {
+            "brand": "Volkswagen",
+            "model": "Polo",
+            "year": "2004",
+            "pricePerDay": "15000",
+            "borrowable": true
+        },
+        {
+            "brand": "Ford",
+            "model": "Focus RS",
+            "year": "2016",
+            "pricePerDay": "30000",
+            "borrowable": true
+        }
+    ]
+}

@@ -162,42 +162,6 @@
                 android:id="@+id/fordBerles"
                 android:text="Ki szeretném bérelni" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="247dp"
-                android:src="@drawable/bugatti" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/bugattiBrand" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/bugattiModel" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/bugattiYear" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/bugattiPriceperday" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/bugattiKolcsonozheto" />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/bugattiBerles"
-                android:text="Ki szeretném bérelni" />
-
 
         </LinearLayout>
 
