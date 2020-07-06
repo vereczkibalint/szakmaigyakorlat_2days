@@ -3,6 +3,7 @@ package hu.nagy.kristof.carrental;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -41,6 +42,8 @@ public class Autok extends AppCompatActivity {
     TextView fordPriceperday;
     TextView fordkolcsonozheto;
 
+    SharedPreferences sharedPrefVegosszeg;
+
     Button suzukiKolcsonzes, poloKolcsonzes, mazdaKolcsonzes, fordKolcsonzes;
 
     @Override
@@ -48,15 +51,20 @@ public class Autok extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autok);
 
+        sharedPrefVegosszeg = getApplicationContext().getSharedPreferences("vegosszeg", 0);
+
         suzukiKolcsonzes=(Button)findViewById(R.id.suzukiBerles);
         poloKolcsonzes=(Button)findViewById(R.id.poloBerles);
         mazdaKolcsonzes=(Button)findViewById(R.id.mazdaBerles);
         fordKolcsonzes=(Button)findViewById(R.id.fordBerles);
 
         final Intent intent = new Intent(Autok.this,ParameterezoActivity.class);
+
         suzukiKolcsonzes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int osszeg = Integer.parseInt(suzukiPriceperday.getText().toString().split("Ft")[0]);
+                setVegosszegPref(osszeg);
                 startActivity(intent);
             }
         });
@@ -64,6 +72,8 @@ public class Autok extends AppCompatActivity {
         poloKolcsonzes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int osszeg = Integer.parseInt(volkswagenPriceperday.getText().toString().split("Ft")[0]);
+                setVegosszegPref(osszeg);
                 startActivity(intent);
             }
         });
@@ -71,6 +81,8 @@ public class Autok extends AppCompatActivity {
         mazdaKolcsonzes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int osszeg = Integer.parseInt(mazdaPriceperday.getText().toString().split("Ft")[0]);
+                setVegosszegPref(osszeg);
                 startActivity(intent);
             }
         });
@@ -78,6 +90,8 @@ public class Autok extends AppCompatActivity {
         fordKolcsonzes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                int osszeg = Integer.parseInt(fordPriceperday.getText().toString().split("Ft")[0]);
+                setVegosszegPref(osszeg);
                 startActivity(intent);
             }
         });
@@ -88,28 +102,24 @@ public class Autok extends AppCompatActivity {
         for(Car c : cars) {
             switch (c.getBrand()) {
                 case "Suzuki":
-                    Log.d("brand", c.getBrand());
                     suzukiBrand.setText(c.getBrand());
                     suzukiModel.setText(c.getModel());
                     suzukiYear.setText(c.getYear().toString());
                     suzukiPriceperday.setText(c.getPricePerDay().toString() + "Ft / nap");
                     break;
                 case "Mazda":
-                    Log.d("brand", c.getBrand());
                     mazdaBrand.setText(c.getBrand());
                     mazdaModel.setText(c.getModel());
                     mazdaYear.setText(c.getYear().toString());
                     mazdaPriceperday.setText(c.getPricePerDay().toString() + "Ft / nap");
                     break;
                 case "Volkswagen":
-                    Log.d("brand", c.getBrand());
                     volkswagenBrand.setText(c.getBrand());
                     volkswagenModel.setText(c.getModel());
                     volkswagenYear.setText(c.getYear().toString());
                     volkswagenPriceperday.setText(c.getPricePerDay().toString() + "Ft / nap");
                     break;
                 case "Ford":
-                    Log.d("brand", c.getBrand());
                     fordBrand.setText(c.getBrand());
                     fordModel.setText(c.getModel());
                     fordYear.setText(c.getYear().toString());
@@ -144,5 +154,12 @@ public class Autok extends AppCompatActivity {
         fordYear = (TextView)findViewById(R.id.fordYear);
         fordPriceperday = (TextView)findViewById(R.id.fordPriceperday);
         fordkolcsonozheto = (TextView)findViewById(R.id.fordKolcsonozheto);
+    }
+
+    protected void setVegosszegPref(int amount){
+        SharedPreferences.Editor vegosszegEditor = sharedPrefVegosszeg.edit();
+        vegosszegEditor.putInt("osszesen", amount);
+        vegosszegEditor.apply();
+        Log.d("vegosszegset", String.valueOf(sharedPrefVegosszeg.getInt("osszesen",0)));
     }
 }
