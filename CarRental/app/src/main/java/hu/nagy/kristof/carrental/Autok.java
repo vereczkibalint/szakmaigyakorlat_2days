@@ -2,8 +2,11 @@ package hu.nagy.kristof.carrental;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,21 +33,54 @@ public class Autok extends AppCompatActivity {
     TextView volkswagenPriceperday;
     TextView volkswagenkolcsonozheto;
 
-    TextView bugattiBrand;
-    TextView bugattiModel;
-    TextView bugattiYear;
-    TextView bugattiPriceperday;
-    TextView bugattikolcsonozheto;
+
 
     TextView fordBrand;
     TextView fordModel;
     TextView fordYear;
     TextView fordPriceperday;
     TextView fordkolcsonozheto;
+
+    Button suzukiKolcsonzes, poloKolcsonzes, mazdaKolcsonzes, fordKolcsonzes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autok);
+
+        suzukiKolcsonzes=(Button)findViewById(R.id.suzukiBerles);
+        poloKolcsonzes=(Button)findViewById(R.id.poloBerles);
+        mazdaKolcsonzes=(Button)findViewById(R.id.mazdaBerles);
+        fordKolcsonzes=(Button)findViewById(R.id.fordBerles);
+
+        final Intent intent = new Intent(Autok.this,ParameterezoActivity.class);
+        suzukiKolcsonzes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
+
+        poloKolcsonzes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
+
+        mazdaKolcsonzes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
+
+        fordKolcsonzes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
 
         loadTextViews();
         cars = JSONParser.fetchCars(Autok.this);
@@ -79,13 +115,7 @@ public class Autok extends AppCompatActivity {
                     fordYear.setText(c.getYear().toString());
                     fordPriceperday.setText(c.getPricePerDay().toString() + "Ft / nap");
                     break;
-                case "Bugatti":
-                    Log.d("brand", c.getBrand());
-                    bugattiBrand.setText(c.getBrand());
-                    bugattiModel.setText(c.getModel());
-                    bugattiYear.setText(c.getYear().toString());
-                    bugattiPriceperday.setText(c.getPricePerDay().toString() + "Ft / nap");
-                    break;
+
             }
         }
     }
