@@ -9,7 +9,7 @@
     tools:context=".ParameterezoActivity">
 
 
-    <EditText
+    <NumberPicker
         android:id="@+id/napText"
         android:layout_width="362dp"
         android:layout_height="50dp"
