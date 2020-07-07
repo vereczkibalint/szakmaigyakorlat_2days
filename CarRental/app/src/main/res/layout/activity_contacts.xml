@@ -4,21 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/darkmode"
     tools:context=".Contacts">
 
-    <TextView
-        android:id="@+id/textView_fb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="354dp"
-        android:layout_marginEnd="177dp"
-        android:layout_marginBottom="358dp"
-        android:text="TextView"
+    <Button
+        android:id="@+id/nagykristofButton"
+        android:layout_width="195dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="116dp"
+        android:background="#00FFFFFF"
+        android:text="Nagy Kristóf"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/balintButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactText" />
+
+    <Button
+        android:id="@+id/balintButton"
+        android:layout_width="195dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="116dp"
+        android:background="#00FFFFFF"
+        android:text="Vereczki Bálint Zoltán"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/petyusButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nagykristofButton" />
+
+    <Button
+        android:id="@+id/petyusButton"
+        android:layout_width="195dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="2dp"
+        android:background="#00FFFFFF"
+        android:text="Gulyás Péter"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/daniButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balintButton" />
+
+    <Button
+        android:id="@+id/daniButton"
+        android:layout_width="195dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="320dp"
+        android:background="#00FFFFFF"
+        android:text="Balogh Dániel"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/petyusButton" />
 
+    <TextView
+        android:id="@+id/contactText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="36dp"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="50"
+        android:text="Elérhetőségeink"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toTopOf="@+id/nagykristofButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

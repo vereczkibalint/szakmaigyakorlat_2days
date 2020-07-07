@@ -40,7 +40,7 @@ public class Home extends AppCompatActivity implements BottomNavigationView.OnNa
         return false;
     }
 
-    private void displayFragment(Fragment fragment) {
+    public  void displayFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.relative_layout, fragment)
