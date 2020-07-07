@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Autok"
-    android:background="@drawable/carrentalbackground">
+    android:background="@drawable/darkmode">
 
 
 
@@ -22,145 +22,297 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="241dp"
-                android:src="@drawable/suzukiswift" />
+                android:src="@drawable/suzukiswiftpng" />
 
             <TextView
+                android:id="@+id/suzukiBrand"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/suzukiBrand" />
+                android:background="#2AFFFFFF"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20dp"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:shadowColor="#000000"
+                android:textStyle="italic|bold" />
 
             <TextView
+                android:id="@+id/suzukiModel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/suzukiModel" />
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:shadowColor="#000000"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20dp" />
 
             <TextView
+                android:id="@+id/suzukiYear"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/suzukiYear" />
+                android:layout_height="28dp"
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:shadowColor="#000000"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20dp" />
 
             <TextView
+                android:id="@+id/suzukiPriceperday"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/suzukiPriceperday" />
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:shadowColor="#000000"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20dp" />
 
             <TextView
+                android:id="@+id/suzukiKolcsonozheto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/suzukiKolcsonozheto" />
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:background="#2AFFFFFF"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20dp" />
 
             <Button
+                android:id="@+id/suzukiBerles"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/suzukiBerles"
+                android:background="#C807DADA"
+                android:textAllCaps="false"
+                android:textColor="@android:color/primary_text_dark_nodisable"
+                android:textSize="24dp"
+                android:textStyle="bold|italic"
                 android:text="Ki szeretném bérelni" />
 
 
             <ImageView
                 android:layout_width="355dp"
                 android:layout_height="254dp"
-                android:src="@drawable/polo" />
+                android:src="@drawable/polopng" />
 
             <TextView
+                android:id="@+id/poloBrand"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/poloBrand" />
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:background="#2AFFFFFF"
+
+                android:textColor="@android:color/holo_blue_dark"
+
+                android:textSize="20dp"
+                android:textStyle="italic|bold" />
 
             <TextView
+                android:id="@+id/poloModel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/poloModel" />
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20dp" />
 
             <TextView
+                android:id="@+id/poloYear"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/poloYear" />
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20dp" />
 
             <TextView
+                android:id="@+id/poloPriceperday"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/poloPriceperday" />
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20dp" />
 
             <TextView
+                android:id="@+id/poloKolcsonozheto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/poloKolcsonozheto" />
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20dp" />
 
             <Button
+                android:id="@+id/poloBerles"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/poloBerles"
+                android:background="#C807DADA"
+                android:textAllCaps="false"
+                android:textColor="@android:color/primary_text_dark_nodisable"
+                android:textSize="24dp"
+                android:textStyle="bold|italic"
                 android:text="Ki szeretném bérelni" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="259dp"
-                android:src="@drawable/rx8" />
+                android:src="@drawable/mazdarx8png" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:background="#2AFFFFFF"
+                android:textStyle="italic|bold"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
                 android:id="@+id/mazdaBrand" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
                 android:id="@+id/mazdaModel" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
                 android:id="@+id/mazdaYear" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
                 android:id="@+id/mazdaPriceperday" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
                 android:id="@+id/mazdaKolcsonozheto" />
+
             <Button
+                android:id="@+id/mazdaBerles"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/mazdaBerles"
+                android:background="#C807DADA"
+                android:textAllCaps="false"
+                android:textColor="@android:color/primary_text_dark_nodisable"
+                android:textSize="24dp"
+                android:textStyle="bold|italic"
                 android:text="Ki szeretném bérelni" />
 
             <ImageView
+                android:textAllCaps="false"
                 android:layout_width="346dp"
                 android:layout_height="281dp"
-                android:src="@drawable/focusrs" />
+                android:src="@drawable/focusrspng" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:background="#2AFFFFFF"
+                android:textStyle="italic|bold"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
                 android:id="@+id/fordBrand" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
                 android:id="@+id/fordModel" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
                 android:id="@+id/fordYear" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
                 android:id="@+id/fordPriceperday" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:background="#2AFFFFFF"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="50"
+                android:textColor="@android:color/holo_blue_dark"
                 android:id="@+id/fordKolcsonozheto" />
 
             <Button
+                android:id="@+id/fordBerles"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/fordBerles"
+                android:background="#C807DADA"
+                android:textAllCaps="false"
+                android:textColor="@android:color/primary_text_dark_nodisable"
+                android:textSize="24dp"
+                android:textStyle="bold|italic"
                 android:text="Ki szeretném bérelni" />
 
 

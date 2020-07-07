@@ -5,7 +5,7 @@
     android:id="@+id/berletinapokTextView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/carrentalbackground"
+    android:background="@drawable/darkmode"
     tools:context=".ParameterezoActivity">
 
 
@@ -35,6 +35,9 @@
         android:layout_marginEnd="203dp"
         android:layout_marginBottom="6dp"
         android:text=" Ft"
+        android:textSize="20dp"
+
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -63,6 +66,9 @@
         android:layout_marginEnd="203dp"
         android:layout_marginBottom="7dp"
         android:text="TextView"
+        android:textSize="20dp"
+
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toTopOf="@+id/telefonszam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -78,6 +84,9 @@
         android:layout_marginEnd="200dp"
         android:layout_marginBottom="164dp"
         android:text="TextView"
+        android:textSize="20dp"
+
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toTopOf="@+id/orderfinalize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -92,6 +101,9 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="200dp"
         android:text="TextView"
+        android:textSize="20dp"
+
+        android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
