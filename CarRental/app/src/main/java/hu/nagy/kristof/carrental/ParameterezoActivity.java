@@ -1,9 +1,14 @@
 package hu.nagy.kristof.carrental;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
@@ -27,6 +32,7 @@ public class ParameterezoActivity extends AppCompatActivity implements NumberPic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parameterezo);
+        createNotificationChannel();
         sharedPrefUsers = getApplicationContext().getSharedPreferences("users", 0);
         sharedPrefVegosszeg = getApplicationContext().getSharedPreferences("vegosszeg",0);
 
@@ -47,7 +53,13 @@ public class ParameterezoActivity extends AppCompatActivity implements NumberPic
 
         rendelesVeglegesites=(Button) findViewById(R.id.orderfinalize);
 
+       final NotificationCompat.Builder builder = new NotificationCompat.Builder(this,"notification")
+                .setSmallIcon(R.drawable.favicon)
+                .setContentTitle("CarRental értesítés")
+                .setContentText("Véglegesítette a rendelését. Köszönjük a bizalmát!")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
+        final NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
 
         rendelesVeglegesites.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,8 +67,14 @@ public class ParameterezoActivity extends AppCompatActivity implements NumberPic
                 rendelesVeglegesites.setVisibility(View.INVISIBLE);
                 Toast.makeText(ParameterezoActivity.this,"A szalonban átveheti az autót!",Toast.LENGTH_LONG).show();
 
+
+                notificationManager.notify(50,builder.build());
             }
         });
+
+
+
+
     }
 
     protected void updateSharedPrefVegosszeg(int amount){
@@ -74,6 +92,19 @@ public class ParameterezoActivity extends AppCompatActivity implements NumberPic
     }
 
     protected void updateVegosszegTextView(){
-        vegosszeg.setText(String.valueOf(sharedPrefVegosszeg.getInt("osszesen",0)));
+        vegosszeg.setText(String.valueOf(sharedPrefVegosszeg.getInt("osszesen",0))+" Ft");
+    }
+
+    private void createNotificationChannel(){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            CharSequence name = "beadandoChannel";
+            String description = "Csatorna a notification számára";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("notification",name,importance);
+            channel.setDescription(description);
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 }
