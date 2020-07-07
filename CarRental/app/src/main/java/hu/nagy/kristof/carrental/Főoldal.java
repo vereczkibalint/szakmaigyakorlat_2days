@@ -24,7 +24,6 @@ public class Főoldal extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         welcome_message = view.findViewById(R.id.textView_hello);
-        welcome_message.setText("Üdvözöljük!");
-
+        welcome_message.setText("Üdvözöljük a kölcsönzőnkben!");
     }
 }
