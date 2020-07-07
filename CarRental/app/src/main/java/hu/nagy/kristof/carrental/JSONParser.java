@@ -1,7 +1,6 @@
 package hu.nagy.kristof.carrental;
 
 import android.content.Context;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,14 +14,11 @@ public class JSONParser {
     public static String readJSON(Context context) {
         String json = null;
         try {
-            // Opening data.json file
             InputStream inputStream = context.getAssets().open("cars.json");
             int size = inputStream.available();
             byte[] buffer = new byte[size];
-            // read values in the byte array
             inputStream.read(buffer);
             inputStream.close();
-            // convert byte to string
             json = new String(buffer, "UTF-8");
         } catch (IOException e) {
             e.printStackTrace();
