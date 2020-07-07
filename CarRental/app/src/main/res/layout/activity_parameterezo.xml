@@ -11,20 +11,19 @@
 
     <NumberPicker
         android:id="@+id/napText"
-        android:layout_width="362dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
+        android:layout_width="38dp"
+        android:layout_height="69dp"
         android:layout_marginTop="29dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="652dp"
-        android:background="@android:color/white"
+        android:background="@android:color/holo_blue_dark"
         android:ems="10"
         android:hint="Bérlés ideje napokban kifejezve"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.684" />
 
     <TextView
         android:id="@+id/vegosszegText"
@@ -40,7 +39,7 @@
         android:shadowRadius="50"
         android:text=" Ft"
         android:textColor="@android:color/holo_blue_dark"
-
+        android:textStyle="bold"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,6 +74,8 @@
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="50"
+        android:textStyle="bold"
+
         android:text="TextView"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="20dp"
@@ -93,6 +94,8 @@
         android:layout_marginBottom="10dp"
         android:background="#2AFFFFFF"
         android:shadowColor="#000000"
+        android:textStyle="bold"
+
         android:shadowDx="5"
         android:shadowDy="5"
         android:shadowRadius="50"
@@ -110,6 +113,7 @@
         android:layout_width="395dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:textStyle="bold"
 
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="476dp"
@@ -127,4 +131,25 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/telefonszam" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="26dp"
+        android:textSize="18dp"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="50"
+        android:shadowColor="#000000"
+        android:text="Hány napra szeretné bérelni az autót?"
+        android:textColor="@android:color/white"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toTopOf="@+id/vegosszegText"
+        app:layout_constraintEnd_toStartOf="@+id/napText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
