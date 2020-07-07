@@ -12,7 +12,9 @@
         android:layout_above="@id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:text="Sign Up"
+        android:text="Bejelentkezés"
+        android:textStyle="bold|italic"
+        android:textSize="45dp"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
         android:textColor="@color/colorFormBackground" />
 
@@ -33,7 +35,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_email"
             android:drawablePadding="5dp"
-            android:hint="email"
+            android:hint="Add meg az email címed"
             android:inputType="textEmailAddress" />
 
         <EditText
@@ -42,7 +44,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_phone"
             android:drawablePadding="5dp"
-            android:hint="phone number" />
+            android:hint="Add meg a telefonszámod" />
 
         <EditText
             android:id="@+id/editTextName"
@@ -50,10 +52,11 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/ic_name"
             android:drawablePadding="5dp"
-            android:hint="name"
+            android:hint="Add meg a nevedet"
             android:inputType="textPersonName" />
 
     </LinearLayout>
+
     <Button
         android:id="@+id/buttonSignUp"
         android:layout_width="180dp"
@@ -62,7 +65,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Sign Up"
+        android:text="Belépés"
         android:textAllCaps="false"
         android:textColor="@color/colorFormBackground" />
 
