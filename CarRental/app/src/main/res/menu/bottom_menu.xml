@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_car"
+        android:icon="@drawable/ic_car"
+        android:title="Autók"
+        />
+
+    <item
+        android:id="@+id/menu_elerhetosegek"
+        android:icon="@drawable/ic_email"
+        android:title="Elérhetőségek"
+        />
+
+</menu>

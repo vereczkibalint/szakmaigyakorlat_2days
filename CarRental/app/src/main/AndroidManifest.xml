@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/favicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ParameterezoActivity"></activity>
+        <activity android:name=".Home"></activity>
+        <activity android:name=".Contacts" />
+        <activity android:name=".ParameterezoActivity" />
         <activity android:name=".Autok" />
         <activity android:name=".MainActivity">
             <intent-filter>

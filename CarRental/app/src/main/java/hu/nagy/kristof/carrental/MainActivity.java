@@ -1,7 +1,6 @@
 package hu.nagy.kristof.carrental;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -21,33 +20,29 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         singUpButton=(Button)findViewById(R.id.buttonSignUp);
         email = (EditText) findViewById(R.id.editTextEmail);
         phoneNumber = (EditText)findViewById(R.id.editTextPhoneNumber);
         name = (EditText)findViewById(R.id.editTextName);
-
         sharedPrefUsers = getApplicationContext().getSharedPreferences("users", 0);
-
         singUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(validateData()){
                     setUserDataPrefs();
-                    loadCarsActivity();
+                    loadHomeActivity();
                 }else{
                     Toast.makeText(MainActivity.this, "Minden mező kitöltése kötelező!", Toast.LENGTH_LONG).show();
                 }
             }
         });
-
         if(sharedPrefUsers.getString("name", "") != ""){
-            loadCarsActivity();
+            loadHomeActivity();
         }
     }
 
-    protected void loadCarsActivity(){
-        Intent intent = new Intent(MainActivity.this, Autok.class);
+    protected void loadHomeActivity(){
+        Intent intent = new Intent(MainActivity.this, Home.class);
         startActivity(intent);
     }
 
