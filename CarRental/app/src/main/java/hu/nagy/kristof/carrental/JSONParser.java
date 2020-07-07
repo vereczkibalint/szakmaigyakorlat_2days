@@ -1,7 +1,6 @@
 package hu.nagy.kristof.carrental;
 
 import android.content.Context;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;

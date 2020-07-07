@@ -161,6 +161,5 @@ public class Autok extends AppCompatActivity {
         vegosszegEditor.putInt("osszesen", amount);
         vegosszegEditor.putInt("napiDij", amount);
         vegosszegEditor.apply();
-        Log.d("vegosszegset", String.valueOf(sharedPrefVegosszeg.getInt("osszesen",0)));
     }
 }
