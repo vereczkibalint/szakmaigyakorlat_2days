@@ -39,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 }else {
                     setUserDataPrefs();
                     loadHomeActivity();
-                }else{
-                    Toast.makeText(MainActivity.this, "Minden mező kitöltése kötelező!", Toast.LENGTH_LONG).show();
                 }
             }
         });
