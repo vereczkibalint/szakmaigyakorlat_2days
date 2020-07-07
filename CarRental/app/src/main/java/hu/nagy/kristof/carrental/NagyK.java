@@ -13,7 +13,6 @@ public class NagyK extends AppCompatActivity {
     Button facebookgomb;
     Button gmailgomb;
     Button phonegomb;
-    Button tovabb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

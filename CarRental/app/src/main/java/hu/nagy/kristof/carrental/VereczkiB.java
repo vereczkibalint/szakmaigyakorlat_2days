@@ -12,7 +12,6 @@ public class VereczkiB extends AppCompatActivity {
     Button facebookgomb;
     Button gmailgomb;
     Button phonegomb;
-    Button tovabb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
