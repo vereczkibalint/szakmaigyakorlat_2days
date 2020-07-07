@@ -57,7 +57,7 @@ public class ParameterezoActivity extends AppCompatActivity implements NumberPic
                 .setSmallIcon(R.drawable.favicon)
                 .setContentTitle("CarRental értesítés")
                 .setContentText("Véglegesítette a rendelését. Köszönjük a bizalmát!")
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                .setPriority(NotificationCompat.PRIORITY_HIGH);
 
         final NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
 
@@ -99,7 +99,7 @@ public class ParameterezoActivity extends AppCompatActivity implements NumberPic
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             CharSequence name = "beadandoChannel";
             String description = "Csatorna a notification számára";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            int importance = NotificationManager.IMPORTANCE_HIGH;
             NotificationChannel channel = new NotificationChannel("notification",name,importance);
             channel.setDescription(description);
 
