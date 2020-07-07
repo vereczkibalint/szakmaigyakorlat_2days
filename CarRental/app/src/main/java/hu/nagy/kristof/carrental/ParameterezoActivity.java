@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Intent;
@@ -57,7 +58,8 @@ public class ParameterezoActivity extends AppCompatActivity implements NumberPic
                 .setSmallIcon(R.drawable.favicon)
                 .setContentTitle("CarRental értesítés")
                 .setContentText("Véglegesítette a rendelését. Köszönjük a bizalmát!")
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setDefaults(Notification.DEFAULT_ALL);
 
         final NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
 
@@ -99,7 +101,7 @@ public class ParameterezoActivity extends AppCompatActivity implements NumberPic
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             CharSequence name = "beadandoChannel";
             String description = "Csatorna a notification számára";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            int importance = NotificationManager.IMPORTANCE_HIGH;
             NotificationChannel channel = new NotificationChannel("notification",name,importance);
             channel.setDescription(description);
 
